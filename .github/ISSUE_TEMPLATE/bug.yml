@@ -1,0 +1,37 @@
+name: Bug report
+description: The plugin did something other than what it says it does.
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you selected and did, and what the plugin did instead of what you expected. Include any message shown in the bubble or in a notification.
+    validations:
+      required: true
+
+  - type: textarea
+    id: where
+    attributes:
+      label: Where you selected the text
+      description: The application, and whether the text came from a selection or the clipboard. Do not paste private text; a short public sample is enough.
+      placeholder: Firefox, selected a paragraph of an English article with the mouse
+    validations:
+      required: true
+
+  - type: input
+    id: engine
+    attributes:
+      label: Translation engine
+      description: Your default agent and its version, from `omarchy default agent` and the agent's `--version`.
+      placeholder: claude 2.1.296
+    validations:
+      required: true
+
+  - type: input
+    id: versions
+    attributes:
+      label: Omarchy and Hyprland versions
+      placeholder: Omarchy 4.0.4, Hyprland 0.56.2
+    validations:
+      required: true
